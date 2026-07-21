@@ -10,7 +10,7 @@ import {
   Eye, EyeOff, Mail, Lock, AlertTriangle, ChevronRight,
   Clock, Activity, Target, TrendingUp,
 } from "lucide-react";
-
+const LOGO = "/images/logo.png";
 const PerformanceSection = lazy(() => import("@/features/analytics/PerformanceSection"));
 
 import { useSignals } from "@/features/signals/useSignals";
@@ -77,25 +77,13 @@ function impactBadge(impact: string) {
 
 function Logo({ size = 36 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 40 40" fill="none">
-      <defs>
-        <linearGradient id="dg" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#2563EB" />
-          <stop offset="55%" stopColor="#6D28D9" />
-          <stop offset="100%" stopColor="#F5B301" />
-        </linearGradient>
-        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="1.5" result="blur" />
-          <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-        </filter>
-      </defs>
-      <polygon points="20,2 38,13 38,27 20,38 2,27 2,13" fill="url(#dg)" filter="url(#glow)" />
-      <line x1="20" y1="9" x2="20" y2="31" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
-      <rect x="15" y="14" width="10" height="12" rx="2" fill="white" opacity="0.92" />
-      <circle cx="34" cy="7" r="2" fill="#F5B301" opacity="0.9" />
-      <circle cx="6" cy="33" r="1.5" fill="#2563EB" opacity="0.7" />
-      <circle cx="33" cy="32" r="1.2" fill="#6D28D9" opacity="0.7" />
-    </svg>
+    <img
+      src={LOGO}
+      alt="4xGem"
+      width={size}
+      height={size}
+      className="object-contain"
+    />
   );
 }
 
