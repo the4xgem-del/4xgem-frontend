@@ -526,7 +526,7 @@ function FooterSection() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 mb-4">
               <Logo size={30} />
-              <span className="text-xl font-bold text-white">4xGem</span>
+             
             </div>
             <p className="text-sm leading-relaxed mb-4 text-gray-500">Professional trading signals for Forex, Gold, Crypto, and Indices. Trusted by 12,000+ traders worldwide.</p>
             <p className="text-xs text-gray-600 leading-relaxed">Trading signals are for educational and informational purposes only. Trading involves substantial risk of loss and may not be suitable for all investors. Past performance is not indicative of future results.</p>
@@ -638,7 +638,7 @@ function AuthScreen({ authView, setAuthView, onAuthSuccess, onBack }: {
         <div className="text-center mb-8">
           <button onClick={onBack} className="inline-flex items-center gap-2 mb-6">
             <Logo size={42} />
-            <span className="text-2xl font-bold text-[#111827]">4xGem</span>
+           
           </button>
           <p className="text-[#6B7280] text-sm">Professional Trading Intelligence Platform</p>
         </div>
