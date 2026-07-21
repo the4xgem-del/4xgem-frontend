@@ -74,14 +74,15 @@ function impactBadge(impact: string) {
 }
 
 // ─── Logo ─────────────────────────────────────────────────────────────────────
-
-function Logo({ size = 36 }: { size?: number }) {
+function Logo({ height = 64 }: { height?: number }) {
   return (
     <img
       src={LOGO}
       alt="4xGem"
-      width={size}
-      height={size}
+      style={{
+        height: `${height}px`,
+        width: "auto",
+      }}
       className="object-contain"
     />
   );
@@ -209,7 +210,7 @@ function LandingNav({ onGetStarted }: { onGetStarted: () => void }) {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
           <Logo size={32} />
-          <span className="text-xl font-bold text-[#111827] tracking-tight">4xGem</span>
+         
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#6B7280]">
           {["Features", "Signals", "Pricing", "Education"].map(item => (
