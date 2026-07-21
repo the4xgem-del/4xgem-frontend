@@ -1000,7 +1000,7 @@ function Sidebar({ section, setSection, open, setOpen, onLogout, isAdmin }: {
     >
       <div className="h-16 flex items-center px-4 border-b border-[#E5E7EB] gap-3 overflow-hidden">
         <Logo size={30} />
-        {open && <span className="font-bold text-[#111827] text-lg whitespace-nowrap">4xGem</span>}
+       
         <button onClick={() => setOpen(!open)} className="ml-auto p-1.5 rounded-lg text-[#6B7280] hover:bg-gray-100 transition-colors flex-shrink-0">
           <Menu className="w-5 h-5" />
         </button>
