@@ -1112,7 +1112,7 @@ function SignalCard({ signal, preview = false }: { signal: UiSignal; preview?: b
 
 function LiveSignals() {
   const [filter, setFilter] = useState("All");
-  const cats = ["All", "Forex", "Gold", "Crypto", "Indices"];
+  const cats = ["All", "Forex", "Gold", "Crypto"];
   const { signals, isLoading, isError } = useSignals({ pageSize: 50 });
   const filtered = filter === "All" ? signals : signals.filter(s => s.category === filter);
 
@@ -1216,7 +1216,7 @@ function LiveSignals() {
 
 function MarketNewsSection() {
   const [activeTab, setActiveTab] = useState("All");
-  const tabs = ["All", "Forex", "Gold", "Crypto", "Indices"];
+  const tabs = ["All", "Forex", "Gold", "Crypto"];
   const { news, isLoading, isError } = useNews();
   const filtered = activeTab === "All" ? news : news.filter(n => n.category === activeTab);
 

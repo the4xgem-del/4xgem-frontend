@@ -6,15 +6,15 @@ export interface InstrumentDef {
 }
 
 export const WATCHED_INSTRUMENTS: InstrumentDef[] = [
+    { symbol: "XAU/USD", displayPair: "XAUUSD", category: "GOLD", pipSize: 0.1 },
   { symbol: "EUR/USD", displayPair: "EURUSD", category: "FOREX", pipSize: 0.0001 },
+  { symbol: "BTC/USD", displayPair: "BTCUSD", category: "CRYPTO", pipSize: 1 },
   { symbol: "GBP/USD", displayPair: "GBPUSD", category: "FOREX", pipSize: 0.0001 },
   { symbol: "USD/JPY", displayPair: "USDJPY", category: "FOREX", pipSize: 0.01 },
   { symbol: "GBP/JPY", displayPair: "GBPJPY", category: "FOREX", pipSize: 0.01 },
   { symbol: "AUD/USD", displayPair: "AUDUSD", category: "FOREX", pipSize: 0.0001 },
   { symbol: "USD/CAD", displayPair: "USDCAD", category: "FOREX", pipSize: 0.0001 },
-  { symbol: "XAU/USD", displayPair: "XAUUSD", category: "GOLD", pipSize: 0.1 },
-  { symbol: "BTC/USD", displayPair: "BTCUSD", category: "CRYPTO", pipSize: 1 },
-  { symbol: "ETH/USD", displayPair: "ETHUSD", category: "CRYPTO", pipSize: 0.1 },
+ { symbol: "ETH/USD", displayPair: "ETHUSD", category: "CRYPTO", pipSize: 0.1 },
 ];
 
 export function instrumentForPair(displayPair: string): InstrumentDef | undefined {
